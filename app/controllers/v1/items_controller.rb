@@ -6,7 +6,7 @@ module V1
     end
 
     def show
-      item = Item.find(params[:id])
+      item = Item.find_by!(sku: params[:id])
       jsonapi_render json: item
     end
   end

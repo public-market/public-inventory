@@ -41,6 +41,7 @@ Metrics/BlockLength:
     - 'app/swagger/**/*'
     - 'config/**/*'
     - 'db/**/*'
+    - 'spec/**/*'
 
 # DISABLED
 

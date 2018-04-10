@@ -12,22 +12,21 @@ development:
   password: postgres
 
 test:
-  <<: *default
-  database: storefront_test<%= ENV['TEST_ENV_NUMBER'] %>
-  username: postgres
-  password: postgres
+  adapter: sqlite3
+  database: db/storefront_api.sqlite3
 
 staging:
   <<: *default
   database: storefront_staging
   pool: <%= ENV['WEB_THREADS'] || 20 %>
-  username: postgres
-  password: <%= Rails.application.credentials[:db_password] %>
+  username: <%= ENV['DB_USER'] || 'postgres' %>
+  password: <%= ENV['DB_PASSWORD'] || Rails.application.credentials[:db_password] %>
   host: <%= ENV['DB_HOST'] %>
 
 production:
   <<: *default
   database: storefront_production
   pool: <%= ENV['WEB_THREADS'] || 20 %>
-  password: <%= Rails.application.credentials[:db_password] %>
+  username: <%= ENV['DB_USER'] || 'postgres' %>
+  password: <%= ENV['DB_PASSWORD'] || Rails.application.credentials[:db_password] %>
   host: <%= ENV['DB_HOST'] %>

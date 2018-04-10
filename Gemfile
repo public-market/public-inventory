@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
   "https://github.com/#{repo_name}.git"
 end
 
@@ -13,6 +13,8 @@ gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 
+gem 'spree', github: 'spark-solutions/spree', branch: 'rails-5-2-test'
+
 group :development do
   gem 'byebug'
   gem 'listen', '>= 3.0.5', '< 3.2'
@@ -21,15 +23,13 @@ group :development do
 end
 
 group :test do
-  gem 'factory_bot'
-  gem 'ffaker'
-  gem 'spree', github: 'spark-solutions/spree', branch: 'rails-5-2-test'
-  # gem 'spree_auth_devise', path: '../spree_auth_devise'
-  # gem 'spree_multi_vendor', github: 'public-market/spree_multi_vendor'
-  gem 'database_cleaner'
   gem 'coffee-rails'
+  gem 'database_cleaner'
+  gem 'factory_bot'
   gem 'factory_bot_rails'
+  gem 'ffaker'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'simplecov', require: false
+  gem 'sqlite3'
 end

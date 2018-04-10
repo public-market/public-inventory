@@ -8,17 +8,13 @@ require 'rspec/rails'
 require 'database_cleaner'
 
 require 'simplecov'
-SimpleCov.start(:rails) do
-  add_filter 'vendor/'
-end
-
-# Spree.user_class = 'Spree::User'
+SimpleCov.start
 
 Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 
 # Checks for pending migrations and applies them before tests are run.
 # If you are not using ActiveRecord, you can remove this line.
-ActiveRecord::Migration.maintain_test_schema!
+# ActiveRecord::Migration.maintain_test_schema!
 
 Shoulda::Matchers.configure do |config|
   config.integrate do |with|
