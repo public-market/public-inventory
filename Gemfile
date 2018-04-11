@@ -7,13 +7,13 @@ end
 
 gem 'jsonapi-utils'
 
-gem 'rails', '~> 5.2.beta'
+gem 'rails', '5.2.0'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 
-gem 'spree', github: 'spark-solutions/spree', branch: 'rails-5-2-test'
+gem 'spree_core', github: 'spark-solutions/spree', branch: 'rails-5-2-test'
 
 group :development do
   gem 'byebug'
@@ -23,7 +23,6 @@ group :development do
 end
 
 group :test do
-  gem 'coffee-rails'
   gem 'database_cleaner'
   gem 'factory_bot'
   gem 'factory_bot_rails'

@@ -19,14 +19,8 @@ staging:
   <<: *default
   database: storefront_staging
   pool: <%= ENV['WEB_THREADS'] || 20 %>
-  username: <%= ENV['DB_USER'] || 'postgres' %>
-  password: <%= ENV['DB_PASSWORD'] || Rails.application.credentials[:db_password] %>
-  host: <%= ENV['DB_HOST'] %>
 
 production:
   <<: *default
   database: storefront_production
   pool: <%= ENV['WEB_THREADS'] || 20 %>
-  username: <%= ENV['DB_USER'] || 'postgres' %>
-  password: <%= ENV['DB_PASSWORD'] || Rails.application.credentials[:db_password] %>
-  host: <%= ENV['DB_HOST'] %>

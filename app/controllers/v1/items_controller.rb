@@ -1,5 +1,5 @@
 module V1
-  class ItemsController < ApplicationController
+  class ItemsController < ApiController
     def index
       items = Item.all
       jsonapi_render json: items
