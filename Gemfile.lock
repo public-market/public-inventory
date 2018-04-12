@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/spark-solutions/spree.git
-  revision: d18adaa3c558f091d80f6d4bb960d925e9d0b30c
+  revision: e9eb9a7c4af96d2ce6103ebb1aba075af276b928
   branch: rails-5-2-test
   specs:
     spree_core (3.5.0.alpha)
@@ -18,7 +18,7 @@ GIT
       kaminari (~> 1.0.1)
       monetize (~> 1.1)
       paperclip (~> 5.2.0)
-      paranoia
+      paranoia (~> 2.4.1)
       premailer-rails
       rails (~> 5.2.0)
       ransack (~> 1.8.0)
