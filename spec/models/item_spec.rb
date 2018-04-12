@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Item, type: :resource do
+RSpec.describe Item, type: :model do
   let(:item) { Item.first }
 
   it { expect(item.product_uid).to be_truthy }

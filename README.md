@@ -11,10 +11,34 @@ Open Inventory is Rails API application provides the following JSON:API (http://
 
 `GET /items`
 * Get open inventory items
+* Items are filterable by `title` filter: `/items?filter[title]=example`
 
 `GET /items/:id`
 * Get open inventory item by SKU
 
+`GET /categories`
+* Get open inventory categories
+
+`GET /categories/:id`
+* Get open inventory category by permalink
+
+`GET /categories/:id/relationships/parent`
+* Get parent category relationship
+
+`GET /categories/:id/parent`
+* Get parent category
+
+`GET /categories/:id/relationships/children`
+* Get child categories relationship
+
+`GET /categories/:id/children`
+* Get child categories
+
+`GET /categories/:id/relationships/items`
+* Get category inventory items relationship
+
+`GET /categories/:id/items`
+* Get category related inventory items
 
 ## LICENSE
 

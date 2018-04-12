@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'jsonapi-utils'
+gem 'jsonapi-resources'
 
 gem 'rails', '5.2.0'
 # Use postgresql as the database for Active Record
@@ -16,6 +16,8 @@ gem 'puma', '~> 3.7'
 gem 'spree_core', github: 'spark-solutions/spree', branch: 'rails-5-2-test'
 
 group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'byebug'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'

@@ -4,6 +4,7 @@ class Item < Spree::Variant
   default_scope { where(is_master: false).includes(:product) }
 
   belongs_to :vendor, class_name: 'Vendor'
+  has_many :categories, class_name: 'Category', through: :product, source: :taxons
 
   def product_uid
     product.number
@@ -19,10 +20,6 @@ class Item < Spree::Variant
 
   def details
     options_text
-  end
-
-  def categories
-    product.taxons.map(&:pretty_name)
   end
 
   def seller

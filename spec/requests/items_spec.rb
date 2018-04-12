@@ -4,8 +4,6 @@ RSpec.describe 'Items API', type: :request do
   describe 'GET /items' do
     subject { json.dig('data', 0) }
 
-    let(:first_item) { Item.first }
-
     before { get v1_items_path }
 
     it { expect(response).to have_http_status(200) }
@@ -14,17 +12,23 @@ RSpec.describe 'Items API', type: :request do
     it { expect(json.dig('links', 'next')).to be_truthy }
     it { expect(json.dig('data').count).to eq(10) }
     it { is_expected.to include('type' => 'items') }
-    it { is_expected.to include('id' => first_item.sku) }
-    it { is_expected.to include('links' => { 'self' => match(first_item.sku) }) }
+    it { is_expected.to include('id' => be_truthy) }
+    it { is_expected.to include('links' => { 'self' => be_truthy }) }
+
     it do
       is_expected.to include('attributes' => hash_including(
-        'product_uid' => first_item.product.number,
+        'product_uid' => be_truthy,
         'title' => be_truthy,
         'quantity' => be > 0,
         'price' => be_truthy,
-        'categories' => include(match('Books')),
         'details' => match('Condition'),
-        'seller' => first_item.vendor.name
+        'seller' => be_truthy
+      ))
+    end
+
+    it do
+      is_expected.to include('relationships' => hash_including(
+        'categories' => be_truthy
       ))
     end
   end
@@ -51,11 +55,18 @@ RSpec.describe 'Items API', type: :request do
     it { expect(json.dig('errors', 0, 'title')).to eq('Invalid sort criteria') }
   end
 
-  describe 'GET /items with filtering' do
+  describe 'GET /items with unallowed filtering' do
     before { get v1_items_path(filter: { price: '50' }) }
 
     it { expect(response).to have_http_status(400) }
     it { expect(json.dig('errors', 0, 'title')).to eq('Filter not allowed') }
+  end
+
+  describe 'GET /items with title filtering' do
+    before { get v1_items_path(filter: { title: 'a' }) }
+
+    it { expect(response).to have_http_status(200) }
+    it { expect(json.dig('data').count).to be > 0 }
   end
 
   describe 'GET /item/:id' do
@@ -74,5 +85,27 @@ RSpec.describe 'Items API', type: :request do
       it { expect(response).to have_http_status(200) }
       it { expect(json.dig('data', 'id')).to eq(sku) }
     end
+  end
+
+  describe 'GET /items/:item_id/relationships/categories' do
+    let(:item) { Item.last }
+
+    before { get v1_item_relationships_categories_path(item.sku) }
+
+    it { expect(response).to have_http_status(200) }
+    it { expect(json).to include('links' => hash_including('self', 'related')) }
+    it { expect(json.dig('data').count).to eq(item.categories.count) }
+  end
+
+  describe 'GET /items/:item_id/categories' do
+    let(:item) { Item.last }
+
+    before { get v1_item_categories_path(item.sku) }
+
+    it { expect(response).to have_http_status(200) }
+    it { expect(json.dig('data').count).to be > 0 }
+    it { expect(json.dig('meta', 'record_count')).to eq(item.categories.count) }
+    it { expect(json.dig('links', 'first')).to be_truthy }
+    it { expect(json.dig('links', 'last')).to be_truthy }
   end
 end
