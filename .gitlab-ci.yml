@@ -24,7 +24,6 @@ rspec:
   stage: test
   cache:
     paths:
-      - vendor/bundle
       - cc-test-reporter
   variables:
     RAILS_ENV: test
