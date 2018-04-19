@@ -25,7 +25,14 @@ rspec:
   cache:
     paths:
       - vendor/bundle
+      - cc-test-reporter
   variables:
     RAILS_ENV: test
+  before_script:
+    # setup codeclimate test reporter
+    - wget -nc -O ./cc-test-reporter https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 || true
+    - chmod +x ./cc-test-reporter
+    - ./cc-test-reporter before-build
   script:
     - bundle exec rspec
+    - ./cc-test-reporter after-build --coverage-input-type simplecov --exit-code $?
