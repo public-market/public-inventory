@@ -1,6 +1,6 @@
 ![Public Market Foundation](.github/public_market_readme_banner_1024_big.png)
 
-# Open Inventory - Public Connection Platform
+# Public Inventory System
 
 [![pipeline status](https://gitlab.com/publicmarket/open-inventory/badges/master/pipeline.svg)](https://gitlab.com/publicmarket/open-inventory/commits/master)
 [![Maintainability](https://api.codeclimate.com/v1/badges/8b9d30d3ccf34dc441bb/maintainability)](https://codeclimate.com/github/abundance-labs/open-inventory/maintainability)
