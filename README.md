@@ -1,3 +1,5 @@
+![Abundance Labs](.github/AbundanceLabs_readme_banner.png)
+
 # Open Inventory - Public Connection Platform
 
 [![pipeline status](https://gitlab.com/publicmarket/open-inventory/badges/master/pipeline.svg)](https://gitlab.com/publicmarket/open-inventory/commits/master)
