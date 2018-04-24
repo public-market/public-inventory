@@ -3,8 +3,8 @@
 # Open Inventory - Public Connection Platform
 
 [![pipeline status](https://gitlab.com/publicmarket/open-inventory/badges/master/pipeline.svg)](https://gitlab.com/publicmarket/open-inventory/commits/master)
-[![Maintainability](https://api.codeclimate.com/v1/badges/00a4834f831c8e032c30/maintainability)](https://codeclimate.com/github/public-market/open-inventory/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/00a4834f831c8e032c30/test_coverage)](https://codeclimate.com/github/public-market/open-inventory/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/8b9d30d3ccf34dc441bb/maintainability)](https://codeclimate.com/github/abundance-labs/open-inventory/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/8b9d30d3ccf34dc441bb/test_coverage)](https://codeclimate.com/github/abundance-labs/open-inventory/test_coverage)
 
 A central inventory and orders clearinghouse that receives and openly publishes data on who is selling what, at what price, anywhere in the world. It securely communicates orders when an item is purchased.
 
