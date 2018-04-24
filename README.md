@@ -55,4 +55,4 @@ Open Inventory is Rails API application provides the following JSON:API ([http:/
 
 ## LICENSE
 
-Copyright (c) 2018 Abundance Labs, Inc., released under the LGPL
+Copyright (c) 2018 Public Market Foundation, released under the LGPL
