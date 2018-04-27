@@ -4,9 +4,12 @@
 *.sql
 *.md
 
+.gitlab-ci.yml
 .rspec
 .codeclimate.yml
 .rubocop.yml
+
+.github
 
 coverage
 db/*.sqlite3
