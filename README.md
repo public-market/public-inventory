@@ -6,7 +6,40 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/2a08e6ac45bd2fce6395/maintainability)](https://codeclimate.com/github/public-market-foundation/public-inventory/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/2a08e6ac45bd2fce6395/test_coverage)](https://codeclimate.com/github/public-market-foundation/public-inventory/test_coverage)
 
-Public Inventory receives and openly exposes data on which seller is selling what products, at what prices, anywhere in the world. Anyone can create a personalized product inventory listing for any kind of product they would like to sell. Public Inventory thus enables anyone to create and populate an online store, select the products they would like to sell, and not concern themselves with holding inventory, or managing order fulfillment. Sellers benefit from having their inventory available to be listed for sale on many more online storefronts than they might manage themselves or through their use of a multiple listing service provider, thus broadening the exposure of their products to a larger audience.
+#### A public transparent inventory database to replace the closed data architectures of private marketplaces.
+
+---
+
+
+**Public Market** is restoring the Commercial Commons by building 
+an open, transparent, and competitive architecture 
+for marketplace eCommerce.
+
+**eCommerce Is Broken**
+
+In less than two decades, a handful of private eCommerce platforms 
+have grown to account for over half of online retail sales. 
+The exorbitant fees and commissions they charge force sellers 
+to drive up prices, ultimately hurting consumers.
+
+**A Decentralized Alternative**
+
+We’re leveraging blockchain technology to replace these closed, private, 
+rent-extracting intermediaries with an open architecture and 
+protocol for eCommerce. The Public Market protocol radically lowers costs for both buyers and sellers while requiring no tradeoffs with regards to convenience or risk.
+
+
+---
+
+<p align="center">
+  <img src=".github/PMFP.png?raw=true" alt="PMF Protocol"/>
+</p>
+
+---
+
+## Information
+
+This is just a "mirror" while we are in initial development. - We don't work with pull requests on GitHub at this time but will in the near future. Please contact us at team@publicmarket.io if you would like to contribute. We welcome inquiries with @mention to an admin on our [Telegram Group](https://t.me/publicmrkt)
 
 ## Technical Details
 
