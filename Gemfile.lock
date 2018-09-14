@@ -119,7 +119,7 @@ GEM
     factory_bot_rails (4.11.1)
       factory_bot (~> 4.11.1)
       railties (>= 3.0.0)
-    ffaker (2.9.0)
+    ffaker (2.10.0)
     ffi (1.9.23)
     friendly_id (5.2.4)
       activerecord (>= 4.0.0)
