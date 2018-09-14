@@ -181,7 +181,7 @@ GEM
       terrapin (~> 0.6.0)
     paranoia (2.4.1)
       activerecord (>= 4.0, < 5.3)
-    pg (1.0.0)
+    pg (1.1.3)
     polyglot (0.3.5)
     premailer (1.11.1)
       addressable
