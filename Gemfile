@@ -13,7 +13,7 @@ gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 
-gem 'spree_core', github: 'spark-solutions/spree', branch: 'rails-5-2-test'
+gem 'spree_core', github: 'spree/spree'
 
 group :development do
   gem 'better_errors'
